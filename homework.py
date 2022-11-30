@@ -136,7 +136,7 @@ def main():
         try:
             response = get_api_answer(timestamp)
             homeworks = check_response(response)
-            if not len(homeworks):
+            if not homeworks:
                 logger.debug('Ответ API пуст: нет домашних работ.')
             for homework in homeworks:
                 message = parse_status(homework)
